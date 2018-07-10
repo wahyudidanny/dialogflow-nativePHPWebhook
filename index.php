@@ -30,7 +30,15 @@ if($method == 'POST'){
 			$speech = "Sorry i dont catch your meaning. Please ask something else";
 			break;
 	}
-
+	
+	/* Version 1.0 DialogFlow (API.ai)
+	$response = new \stdClass();
+	$response->speech = "";
+	$response->displayText = "";
+	$response->source ="webhook";
+	echo json_encode($response);*/
+	
+	/* Version 2.0 DialogFlow */
 	$response = new \stdClass();
 	$response->fulfillmentText = $speech;
 	$response->source = "webhook";
