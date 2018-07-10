@@ -6,8 +6,8 @@ if($method == 'POST'){
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
 
-	$text = $json->result->parameters->text;
-
+	//$text = $json->result->parameters->text; //  For Version 1.0 DialogFlow, Json attribute is result
+	$text = $json->queryResult->parameters->text; // For Version 2.0 DialogFlow, Json attribute is queryResult
 	switch ($text) {
 		case 'hi':
 			$speech = "Hi, How Can i help You??";
