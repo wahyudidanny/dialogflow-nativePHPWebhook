@@ -10,7 +10,7 @@ if($method == 'POST'){
 
 	switch ($text) {
 		case 'hi':
-			$speech = "Good Bye, see you later then";
+			$speech = "Hi, How Can i help You??";
 			break;
 
 		case 'bye':
@@ -20,7 +20,12 @@ if($method == 'POST'){
 		case 'anything':
 			$speech = "Yes, you can type anything here";
 			break;
-		
+		case 'hello':
+			$speech = "Well hello to you too";
+			break;
+		case 'are you a bot?':
+			$speech = "Yes, i am a bot";
+			break;
 		default:
 			$speech = "Sorry i dont catch your meaning. Please ask something else";
 			break;
